@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- User card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Your Profile" android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/primary" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="👤 Set your name" android:textSize="16sp" android:layout_marginBottom="12dp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_edit_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Name"
+                    style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Storage info -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Storage (SD Card)" android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/primary" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tv_storage_path"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="📁 /sdcard/ExpenseTracker/data.json"
+                    android:textSize="12sp" android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tv_expense_count"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📊 0 expenses" android:textSize="14sp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Actions -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Actions" android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/primary" android:layout_marginBottom="12dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_export_excel"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="📊 Export to Excel (.xlsx)"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_go_sync"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="🔄 WiFi Sync with Devices"
+                    style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_clear_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="🗑️ Clear All Data"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:textColor="@color/error"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data is stored in /sdcard/ExpenseTracker/\nThis folder survives app uninstall ✅"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>
